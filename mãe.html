@@ -29,19 +29,36 @@
             font-size: 1.2em;
             margin-bottom: 10px;
         }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="audio.mp3" type="audio/mpeg">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
     <div class="container">
         <h1>Lembrete para Minha Mãe</h1>
         <p>Este site é um lembrete do quanto você é importante.</p>
         <p>Reconheço todo o seu esforço, dedicação e trabalho árduo.</p>
         <p>Matrícula: 4.069.048-7</p>
         <p>Obrigado por sempre dar o seu melhor em tudo que faz.</p>
+        <button onclick="playAudio()">Clique aqui para tocar a música</button>
     </div>
+    <audio id="audio" src="audio.mp3"></audio>
+    <script>
+        function playAudio() {
+            const audio = document.getElementById('audio');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
